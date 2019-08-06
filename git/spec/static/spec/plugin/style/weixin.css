@@ -1,0 +1,3 @@
+.weixin{ display:block;text-align:center; position:relative;}
+.weixin img{ display:none;}
+.weixin:hover img{ position:absolute; left:50%; top:0; margin-left:-115px; padding-top:30px; display:block;}

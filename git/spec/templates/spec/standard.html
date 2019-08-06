@@ -1,0 +1,651 @@
+{% load custimed_tags %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>HXT PDP - Standard Bench</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'spec/plugin/decoration/css/reset.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'spec/plugin/decoration/css/text.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'spec/plugin/decoration/css/grid.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'spec/plugin/bootstrap/css/bootstrap.min.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'spec/plugin/decoration/css/nav.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'spec/plugin/decoration/css/layout.css' %}" media="screen" />
+	<link rel="stylesheet" type="text/css" href="{% static 'spec/plugin/bootstrap/css/bootstrap-multiselect.css' %}" media="screen" />
+	<link rel="stylesheet" type="text/css" href="{% static 'spec/plugin/font-awesome-4.7.0/css/font-awesome.min.css' %}" media="screen" />
+
+	<!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
+    <!-- BEGIN: load jquery -->
+    <script src="{% static 'spec/plugin/javascript/jquery-2.1.4.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'spec/plugin/clipboard.min.js' %}"></script>
+    <script src="{% static 'spec/common/echarts.common.min.js' %}"></script>
+    <script src="{% static 'spec/my_spec/table_tool.js' %}" type="text/javascript"></script>
+    <script src="{% static 'spec/my_spec/figure_tools.js' %}" type="text/javascript"></script>
+    <script src="{% static 'spec/my_spec/spec.js' %}" type="text/javascript"></script>
+    <script src="{% static 'spec/plugin/html2canvas/html2canvas.js' %}" type="text/javascript"></script>
+	<script src="{% static 'spec/my_spec/html2canvas_tools.js' %}" type="text/javascript"></script>
+    <script type="text/javascript" src="{% static 'spec/plugin/decoration/js/jquery-ui/jquery.ui.core.min.js' %}"></script>
+    <script src="{% static 'spec/plugin/decoration/js/jquery-ui/jquery.ui.widget.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'spec/plugin/decoration/js/jquery-ui/jquery.ui.accordion.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'spec/plugin/decoration/js/jquery-ui/jquery.effects.core.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'spec/plugin/decoration/js/jquery-ui/jquery.effects.slide.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'spec/plugin/bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'spec/plugin/bootstrap/js/bootstrap-multiselect.js' %}" type="text/javascript"></script>
+    <script src="{% static 'spec/plugin/bootstrap/js/bootstrap-table.js' %}" type="text/javascript"></script>
+    <!--script src="{% static 'spec/plugin/bootstrap/js/bootstrap-table-zh-CN.js' %}" type="text/javascript"></script-->
+    <!-- END: load jquery -->
+
+    <!-- END: load jquery -->
+
+<style>
+.dropdown-menu li{
+	margin-left:0px;
+	margin-right:0px;
+}
+.dropdown-menu{
+	min-width:70px;
+	min-height: auto;
+        padding:0px;
+}
+
+.btn-group{
+	margin-bottom:5px;
+        margin-top:5px;
+	margin-right:1%;
+	float:left;
+	min-width:70px;
+}
+.btn{
+	background-color:white;
+	border-color:buttonface;
+    color: #1B548D;
+	font:Times New Roman;
+    font-size: 12px;
+	text-shadow: none;
+    padding: 0 1px 1px;
+}
+
+.btn, .btn-icon{
+	font-size:10px;
+	height: 21px;
+	line-height: 20px;
+	font-weight:none;
+}
+
+.modal-footer .btn{
+
+	height: 30px;
+}
+
+.dropdown-menu>li>a {
+    float: none;
+
+}
+
+.dropdown-menu {
+    min-width: 80px;
+}
+    .pull-left{
+	width:45%;
+}
+
+.pagination-info {
+    margin-right: 1px;
+}
+
+
+.page-list .btn-group{
+	min-width:0px;
+	float:none;
+}
+
+.fixed-table-pagination .page-list {
+    display: inline;
+}
+
+.table>tbody>tr>td{
+	padding: 2px;
+}
+
+.fixed-table-container thead th .th-inner {
+    line-height: 18px;
+}
+
+.pagination>li {
+	margin-left: 15px;
+}
+
+.modal-footer {
+    padding: 5px;
+}
+
+.tunebox .btn{
+        padding:0 2px 2px;
+        text-shadow:none;
+        border-color:#c2b7b7;
+        background-color: lightgreen;
+        color: black;
+        height: 27px;
+        line-height: 25px;
+        margin-top: 2px;
+        margin-bottom:2px;
+        -webkit-border-radius: 7pt;
+}
+
+.CommentBoxList .btn{
+        font-size: 15px;
+        height: 30px;
+        line-height: 20px;
+}
+
+ul.nav {
+    background: #1a4d66;
+}
+
+ul.nav li {
+    height: 37px;
+}
+
+ul.main li a {
+    height: 37px;
+    line-height: 37px;
+}
+
+label.checkbox{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+</style>
+
+
+</head>
+
+<body style="background:#2E5E79;">
+    <div class="container_12" style="height:100%">
+        <div class="grid_12" style="width:100%;margin-left:0px;margin-right:0px;position: fixed;z-index: 1000;">
+            <ul class="nav main" style="height:37px;background-color: #1a4d66;display:inline-block;width:80%">
+                <a style="float:left;padding:8px 10px 8px 10px;" href="/home"><img src="{% static 'spec/plugin/decoration/img/hxt-logo.png' %}" alt="Logo" width="50" height="20"/></a>
+                <li class="ic-home"  id="ic"><a href="/home"><span>HOME</span></a></li>
+                <li class="ic-openstack" id="ic"><a class="active" href="/spec/standard"><span>STANDARD BENCH</span></a></li>
+                <li class="ic-ceph" id="ic" style="display:none;"><a href="#"><span>APPLICATION BENCH</span></a></li>
+                <li class="ic-bigdata" id="ic"><a href="/summary/{{ release_newest|upper|custimed_replace_point:'_' }}"><span>SUMMARY</span></a></li>
+                <li class="ic-nginx" id="ic" style="display:none;"><a href="#"><span>SETTING</span></a></li>
+                <li class="ic-hhvm" id="ic" style="display:none;"><a href="#"><span>HELP</span></a></li>
+            </ul>
+
+            <ul style="width:20%;float:right;background-color:#1a4d66;height:37px;list-style:none;margin-bottom:0px;display:inline-block" class="inline-ul">
+                <li id="branding" style="padding:0px;padding-right:10px;margin-left:5px;float:right;padding-top:10px"><a href="/logout">Logout</a></li>
+                <li id="branding" style="padding:0px;padding-right:10px;margin-left:5px;float:right;padding-top:10px;display:none;"><a href="">Config</a></li>
+                <li style="float:right;padding-top:6px"><img src="{% static 'spec/plugin/decoration/img/img-profile.jpg' %}" alt="Profile Pic" ><span style="color:#fff; font-size: 10px;padding-left:10px;">welcome<span> <b style="font-style: italic;color:#fff; font-size: 10px; padding-left: 5px;">{{ username }}</b></li>
+            </ul>
+        </div>
+        <div class="clear">
+        </div>
+        <div class="grid_2" style="width:98%;height:100%;margin-top: 37px;">
+			<div class="import-check"  style="float:left; position: fixed;">
+				<br><ul id="li-clink" style="cursor: pointer;">
+                    {% for standard_key,standard_value in standard_app.items %}
+                        {% if standard_value|length > 0 %}
+					        <li class="page1" style="list-style:none; margin-left:10%;" id="page" >
+						        <a class="page_list1" id="page_list" value="{{ standard_key }}">{{ standard_key }}
+                                <img src="{% static 'spec/plugin/decoration/img/right.gif' %}">
+                        {% else %}
+                            <li class="page" style="list-style:none; margin-left:10%;" id="page" >
+						        <a class="page_list" id="page_list" value="{{ standard_key }}" onclick="query_box(this,false)">{{ standard_key }}
+
+                        {% endif %}
+                        </a>
+							<ul class="ul">
+                                {% for standard in standard_value %}
+								<br><li class="sub-page">
+									<a class="page_child" id="page_list" value="{{ standard }}" onclick="query_box(this,false)">{{ standard }}</a>
+								</li>
+                                {% endfor %}
+							</ul>
+					</li><br>
+                    {% endfor %}
+				</ul>
+				<!--img src="../static/img/timg2.gif" alt="jpg" style="width: 100%;" /-->
+				<img src="{% static 'spec/plugin/img/up-icon.jpeg' %}" alt="jpeg" style="width: 100%;" />
+			</div>
+			<!--div style="float:left;width: 1px;height: 680px; background: #2F4F4F;margin-bottom:2px;"></div-->
+
+			<input type="text" class="title-name" id="orderColumn" value="SPECCPU" readonly="readonly">
+			<!--button class="btn-import" type="button"  href="#" onclick="showDialog()"> import </button-->
+                        <div class="dropdown" style="float:right;margin-top:5px;" >
+                                <button type="button" class="btn btn-primary dropdown-toggle" style="float:right;margin-right:2%;" data-toggle="dropdown"  > <span style="padding-left:9px;">Export</span><i class="fa fa-sort-desc" style="font-size:12px;padding-right:9px"></i></button>
+                                <ul class="dropdown-menu" role="menu">
+                                        <li><a class="button_check" href="#" onclick="convertCanvasToImage(this)">pdf</a></li>
+                                        <!--li class="divider" style="margin:0; margin-top:40px;"></li-->
+                                        <li><a class="button_check" href="#" id="down" onclick="convertCanvasToImage(this)">word</a></li>
+                                </ul>
+                        </div>
+
+            <button type="button" class="btn" style="float:right;margin-right:1%;margin-top:5px;" data-toggle="modal" data-target="#import-modal"><span style="padding-left:12px;padding-right:12px;font-size:10px;position: relative;">Import</span></button>
+            <div class="modal fade" id="import-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content" >
+						<div class="modal-header" style="padding: 5px;">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title" id="myModalLabel"><span style="color:#1B548D;">Please import data files</span></h4>
+						</div>
+						<div class="modal-body">
+							<form enctype="multipart/form-data" id="upload">
+								<select class="import-version" name="release" autofocus>
+									{% for release in releases %}
+									<option value="{{ release }}">{{ release|custimed_replace:' ' }}</option>
+									{% endfor %}
+								</select><br><br>
+
+								<label for="note" style="font-family:Times New Roman;font-size: 15px;"> Note: please import *.cvs, *.ini, *.7z files. </label>
+
+								<input type="file"  name="filename" onchange="fileSelected();" multiple="multiple" id="files" />
+								<span id="file_name"> </span><br>
+								<br>
+								<label for="note" style="font-family:Times New Roman;font-size: 15px;">Tune and comment:(click the textbox to edit it.)</label><br>
+
+								<textarea type="text" style="font-family:Times New Roman;font-size:15px;height:70px;width:300px; position:relative;border-width:1px;border-style:solid; resize: none;" name="tune" value=""> </textarea><br>
+                                <span id="upload_status" style="color: #5c8000;font-weight: bold;font-family: italic;font-size: large;display: block"> </span>
+                                <div class="modal-footer" style="border-top:0;">
+                                    <input type="submit" class="btn" style="background-color:#1B548D;padding:5px 10px;font-size:10px;color:white;"value="Import" />
+                                </div>
+							</form>
+
+                            <div class="modal-footer" style="border-top:0;">
+                                <!--modified add progress and text-->
+                                <progress class="loadprogress" id="loadprogress" max="100" value="0" style="display: block;width: 99%;height: 30px"></progress>
+
+                                <!-- <input type="text" class="progressdisplay" id="progressdisplay"  value=""> -->
+						    </div>
+                            <div style="position: relative"><span id="progressdisplay" style="position: absolute;left: 41%;top: -38px;"></span></div>
+
+						</div>
+
+					</div>
+				</div>
+            </div>
+
+
+			<div style="float:right;width:82%;height:1px; background: #2F4F4F;"></div>
+			<div class="select-filter" style="float:right; ">
+                    <button type="button" style="width: 60px;margin-top:5px;" class="btn btn-primary btn-1g pull-filter" data-toggle="modal" data-target="#filter_result" onclick="btnvalue()"><i class="fa fa-search" style="font-size:15px; padding-top:3px;"></i></button>
+{#                    <button class="pull-filter" onclick="data_gain()" value="filter"><i class="fa fa-search" style="font-size:23px;"></i></button>#}
+                                <!-- Advance start -->
+
+<button type="button" style="float:right;margin-right:1%;margin-top:5px;" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#operation_modal" onclick="Reset_Advanced_Status()"> <span style="padding-left:5px;padding-right:5px;font-size:10px;position: relative;"> Advanced </span> </button>
+
+<!-- Modal -->
+<div class="modal fade" id="operation_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+
+          <div>
+
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs " role="tablist">
+            <li role="presentation" class="active"><a href="#advanced_form_panel" aria-controls="home" role="tab" data-toggle="tab">Data</a></li>
+            <li role="presentation"><a href="#advanced_soc_panel" aria-controls="profile" role="tab" data-toggle="tab">SOC</a></li>
+            <li role="presentation"><a href="#advanced_hardware_panel" aria-controls="messages" role="tab" data-toggle="tab">Hardware</a></li>
+            <li role="presentation"><a href="#advanced_software_panel" aria-controls="settings" role="tab" data-toggle="tab">Software</a></li>
+            <li role="presentation"><a href="#advanced_tune_panel" aria-controls="haha" role="tab" data-toggle="tab">System Setting</a></li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content" style="height: 500px">
+            <div role="tabpanel" class="tab-pane active" id="advanced_form_panel" style="height: 500px;overflow: auto">
+                <div id="advanced_form" class="common_advanced">
+                    <div>
+                        <label>
+                            <input type="checkbox"> int
+                        </label>
+                        <div>
+                              <label>
+                                <input type="checkbox"> 400
+                            </label>
+                              <label>
+                                <input type="checkbox"> 500
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="advanced_soc_panel" style="height: 500px;overflow: auto">
+                <div id="advanced_soc" class="common_advanced">
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="advanced_hardware_panel" style="height: 500px;overflow: auto">
+                <div id="advanced_hardware" class="common_advanced">
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="advanced_software_panel" style="height: 500px;overflow: auto">
+                <div id="advanced_software" class="common_advanced">
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="advanced_tune_panel" style="height: 500px;overflow: auto">
+                <div id="advanced_tune" class="common_advanced">
+                </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="apply_advanced()">Apply</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Advance end -->
+					<div style="margin-left:1%;"></div>
+					<div class="dropdown" style="float:right;margin-bottom:5px;margin-top:5px;margin-right:1%;" >
+						<button type="button" class="btn" style="float:right;margin-right:2%;width: 60px;" data-toggle="dropdown" >More<span class="caret"></span></button>
+						<ul class="dropdown-menu" style="width:100px;" role="menu" id="add_filter">
+							<li>
+								<!-- label class="checkbox" style="vertical-align:middle;text-align:center;"-->
+								<label class="checkbox" style="margin-left:25px;">
+									<input type="checkbox" style="float:left;" checked="" value="soc">SOC
+								</label>
+							</li>
+							<!--li class="divider" style="margin:0; margin-top:40px;"></li-->
+							<li>
+								<label class="checkbox" style="margin-left:25px;">
+									<input type="checkbox" style="float:left;" checked="" value="platform" >Platform
+								</label>
+							</li>
+						</ul>
+					</div>
+                    <form style="width:87%; margin-left:0%;" action="" id="query" name="query" method="post">
+                        <select name="release" class="check-down" multiple="multiple">
+                            <option value="release_v1">release_v1</option>
+                            <option value="release_v2">release_v2</option>
+                        </select>
+                        <select name="os" class="check-down" multiple="multiple">
+                            <option value="os_v1">os_v1</option>
+                            <option value="os_v2">os_v2</option>
+                        </select>
+                    </form>
+			</div>
+			<div style="float:right;width:82%;height:1px; background: #2F4F4F;margin-bottom:1%;margin-top:2px;"></div>
+
+			<div class="select-display"  style="float:right;">
+
+                <div class="box round first" style="margin-top:0px;margin-left:1%;overflow: auto">
+                <input id="ResetBtn" style="border-radius:5px;font-weight:bold; float:right;display: none" type="button" onclick="ResetBtn()" value="Cancel">
+                <input id="check-btn" style="border-radius: 5px;font-weight: bold; float:right; width:55px;" type="button" onclick="CheckBtn()" value="Edit">
+                <input  style="border-radius:5px;font-weight:bold; float:right;" type="button" class="copy-btn" value="Copy Link">
+                <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                        <div class="modal-content" >
+                                                <div class="modal-header" style="padding: 5px;">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel"><span style="color:#1B548D;">Delete Data</span></h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                        <form enctype="multipart/form-data" id="data_list">
+                                                        </form>
+                                                  </div>
+
+                                <div class="modal-footer" style="border-top:0;">
+                                    <input type="submit" class="btn" style="background-color:#1B548D;padding:5px 10px;font-size:10px;color:white;"value="Delete" onclick="DeleteHsrp()" />
+                                    <input type="submit" class="btn" style="background-color:#1B548D;padding:5px 10px;font-size:10px;color:white;" data-dismiss="modal" value="Cancel" />
+                                </div>
+
+
+                                        </div>
+                                </div>
+            </div>
+
+					<h2>Data</h2>
+                    <div style="overflow: auto">
+                        <table class="summary-table1" id="summary">
+					    </table>
+                    </div>
+				</div>
+
+				<div style="margin-top:5px"></div>
+				<div class="box round first" style="margin-top:0px;margin-left:1%;" >
+					<h2>Chart</h2>
+                    <div id="chart" style=""></div>
+				</div>
+				<div style="margin-top:5px"></div>
+				<div class="box round first" style="margin-top:0px;margin-left:1%;overflow: auto" >
+					<h2>SoC</h2>
+                    <div style="overflow: auto">
+					    <table class="summary-table1" id="soc">
+					    </table>
+                    </div>
+				</div>
+				<div style="margin-top:5px"></div>
+				<div class="box round first" style="margin-top:0px;margin-left:1%;overflow: auto" >
+					<h2>Hardware</h2>
+                    <div style="overflow: auto">
+					<table class="summary-table1" id="hardware">
+
+                    </table>
+                    </div>
+				</div>
+                <div class="box round first" style="margin-top:0px;margin-left:1%;overflow: auto" >
+					<h2>Software</h2>
+                    <div style="overflow: auto">
+					<table class="summary-table1" id="software">
+
+					</table>
+                    </div>
+				</div>
+                <div class="box round first" style="margin-top:0px;margin-left:1%;overflow: auto" >
+					<h2>System Setting</h2>
+                    <div style="overflow: auto">
+					<table class="summary-table1" id="system-setting">
+
+					</table>
+                    </div>
+				</div>
+				<div style="margin-top:5px"></div>
+				<div class="box round first" style="margin-top:0px;margin-left:1%;" >
+					<button  id="save-btn" style="border-radius: 5px;font-weight: bold; float:right" type="button" onclick="updateTune()" >Save All</button>
+{#					<button  id="cancel-btn" style="width:60px;height:25px; float:right" type="button" onclick="clean()" >cancel</button>#}
+					<h2 id="tuneround">Tune </h2>
+                                        <div id="tunetable" style="overflow: auto">
+
+			                </div>
+                			<div id="textedit">
+
+                			</div>
+
+				</div>
+				<div style="margin-top:5px"></div>
+
+                                <div class="box round first" style="margin-top:0px;margin-left:1%;" >
+                                        <h2 id="commentround">Comments </h2>
+                                        <div id="commenttable" style="overflow: auto">
+
+                                        </div>
+                                        <div id="commentboxlist" style="overflow: auto;border:none;">
+
+                                        </div>
+
+                                </div>
+<!-- strashcomment start -->
+         <div class="modal fade" id="strash-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                        <div class="modal-content" >
+                                                <div class="modal-header" style="padding: 5px;">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel"><span style="color:#1B548D;">Delete Comment</span></h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                        <form enctype="multipart/form-data">
+                                                        <input type="text" id="deleteauthor" class="comment-title" style="margin:10px;" value="" comment_id="" readonly="readonly">
+                                                        </form>
+                                                  </div>
+
+                                <div class="modal-footer" style="border-top:0;">
+                                    <input type="submit" class="btn" style="background-color:#1B548D;padding:5px 10px;font-size:10px;color:white;"value="Delete" onclick="deleteComment()" />
+                                    <input type="submit" class="btn" style="background-color:#1B548D;padding:5px 10px;font-size:10px;color:white;" data-dismiss="modal" value="Cancel" />
+                                </div>
+
+
+                                        </div>
+                                </div>
+            </div>
+
+<!--strashcomment end -->
+                                <div style="margin-top:5px"></div>
+				<div class="clear"></div>
+
+			</div>
+
+        <div class="modal fade" id="filter_result" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog" style="width:65%;">
+					<div class="modal-content">
+						<div class="modal-header" style="padding: 5px;">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title" id="muModalLabel"><span style="color:#1B548D;">Filter information</span></h4>
+						</div>
+						<div class="modal-body" style="position: relative">
+                            <input id="filter_checkbox" type="checkbox" style="position: absolute;top: 40px;left:18px;z-index: 999" onclick="query_condition_checkboxs()">
+							<form enctype="multipart/form-data" id="query_all">
+								<table style="margin-top:0px;" id="query_condition" data-toggle="table" data-classes="table" data-row-style="rowStyle">
+
+								</table>
+							</form>
+						</div>
+						<div class="modal-footer" style="border-top:0;">
+                            <button type="button" class="btn btn-primary" onclick="draw_all_data('haha')" style="background-color:#1B548D;"><span style="padding:5px 10px;font-size:12px;color:white;">submit</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+    <div class="clear">
+    </div>
+	</div>
+</body>
+
+<script>
+
+$(document).ready(function(){
+    //Stop click event propagation
+    $("ul.dropdown-menu").on("click", "[data-stopPropagation]", function(e) {
+        e.stopPropagation();
+    });
+ 
+    // selected 'SPECCPU' and this color is 'rgb(16, 117, 217)' in default
+
+    // click tune box title lable for collapse the textarea
+    $("#tuneround").click(function(){
+            $(".tune-text").hide();
+            $(".th_summary1").css({"background-color":"lightgreen","border-bottom-color":"#c2b7b7","color":"black"});
+    });
+
+    //click comment box title lable for collapse the comment lists
+    $("#commentround").click(function(){
+            $(".CommentBoxList").hide();
+            $(".th_summary1").css({"background-color":"lightgreen","border-bottom-color":"#c2b7b7","color":"black"});
+            $("#commentboxlist").css("border","none");
+    });
+
+    //Only the parent directory is selected
+    $(".page_list").click(function(){
+        $(this).css("color","#1075d9").parents().siblings().children("a.page_list").css("color","#1B548D");
+        $(".page_child").css("color","#1B548D");
+    });
+
+    // Only the children directory is selected
+    $(".page_child").click(function(){
+        $(this).css("color","#1075d9").parents().siblings().children("a.page_child").css("color","#1B548D");
+        $(".page_list").css("color","#1B548D");
+    });
+
+    $(".page_list1").click(function() {
+        if ($(this).next().css('display') == 'none'){
+            $(this).find('img').attr("src","{% static 'spec/plugin/decoration/img/down.png' %}");
+        }else{
+           $(this).find('img').attr("src","{% static 'spec/plugin/decoration/img/right.gif' %}");
+            $(".sub-page").css("background-color","#f5f5f5");
+        }
+    });
+
+    //read the selected item value,reset edit button attribution
+    $(".page_list").click(function() {
+        $("#orderColumn").val($(this).attr("value"));
+        document.getElementById("check-btn").value="Edit";
+        $("#ResetBtn").css("display","none");
+        $("#data_list").empty();
+        $('#check-btn').attr({"data-toggle":"", "data-target":""});
+    });
+    $(".page_child").click(function() {
+        $("#orderColumn").val($(this).attr("value"));
+        document.getElementById("check-btn").value="Edit";
+        $("#ResetBtn").css("display","none");
+        $("#data_list").empty();
+        $('#check-btn').attr({"data-toggle":"", "data-target":""});
+    });
+
+	//multiple select checkbox
+	$('.check-down').multiselect({
+		buttonWidth:70,
+		includeSelectAllOption: false,
+		allSelectedText:'select all',
+		nonSelectedText: 'Release',
+		selectedList:4,
+        numberDisplayed: 3,
+	});
+
+	$('.add-filter').multiselect({
+		buttonWidth:70,
+		includeSelectAllOption: false,
+		allSelectedText:'select all',
+		nonSelectedText: 'more',
+		selectedList:4,
+        numberDisplayed: 3,
+	});
+});
+
+jQuery(function($){
+    $(".page_list1").click(function(){
+            $(this).next(".ul").toggle().closest("#page").siblings("#page").children("ul").hide();
+        })
+    });
+
+
+
+//import data module
+    function fileSelected() {
+        var files = document.getElementById('files').files;
+		$("#file_name").empty()
+		for (var i=0; i<files.length; i++){
+			var file = files[i];
+			var list=document.createElement("div");
+			var fileSize = 0;
+			if (file.size > 1024 * 1024)
+				fileSize = (Math.round(file.size * 100 / (1024 * 1024)) / 100).toString() + 'MB';
+			else
+				fileSize = (Math.round(file.size * 100 / 1024) / 100).toString() + 'KB';
+
+			$("#file_name").append("Name:"+file.name+ ", Size:" + fileSize +"; ");
+
+		}
+    }
+
+function clean(){
+	$("#comment-text").val("");
+}
+
+
+</script>
+</html>
+
+

@@ -1,0 +1,126 @@
+{% load custimed_tags %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>HXT PDP - Home</title>
+
+
+	<link rel="stylesheet" type="text/css" href="../static/plugin/decoration/css/reset.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../static/plugin/decoration/css/text.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../static/plugin/decoration/css/grid.css" media="screen" />
+ 	<link rel="stylesheet" type="text/css" href="../static/plugin/bootstrap/css/bootstrap-table.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="../static/plugin/bootstrap/css/bootstrap.min.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="../static/plugin/decoration/css/nav.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="../static/plugin/decoration/css/layout.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../static/plugin/font-awesome-4.7.0/css/font-awesome.css" media="screen" />
+
+    <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
+    <!-- BEGIN: load jquery -->
+    <script src="../static/plugin/decoration/js/jquery-1.6.4.min.js" type="text/javascript"></script>
+    <script src="../static/software/home.js" type="text/javascript"></script>
+    <script type="../static/decoration/text/javascript" src="../static/plugin/decoration/js/jquery-ui/jquery.ui.core.min.js"></script>
+    <script src="../static/plugin/decoration/js/jquery-ui/jquery.ui.widget.min.js" type="text/javascript"></script>
+    <script src="../static/plugin/decoration/js/jquery-ui/jquery.ui.accordion.min.js" type="text/javascript"></script>
+    <script src="../static/plugin/decoration/js/jquery-ui/jquery.effects.core.min.js" type="text/javascript"></script>
+    <script src="../static/plugin/decoration/js/jquery-ui/jquery.effects.slide.min.js" type="text/javascript"></script>
+	<script src="../static/plugin/javascript/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="../static/plugin/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../static/plugin/bootstrap/js/bootstrap-table.js" type="text/javascript"></script>
+	<!--script src="../static/plugin/bootstrap/js/bootstrap-table-zh-CN.js" type="text/javascript"></script-->
+    <!-- END: load jquery -->
+    <style>
+
+    .table_page>tbody>tr:hover {
+        background-color:transparent;
+    }
+    .table-striped>tbody>tr:nth-of-type(odd) {
+        background-color: white;
+    }
+
+    .table-striped>tbody>tr:nth-of-type(even) {
+        background-color: #FFC;
+    }
+
+    .table_page>thead {
+        background-color: #337ab7;
+        color: white;
+    }
+    </style>
+</head>
+<body style="background:#2E5E79;">
+    <div class="container_12" style="height:100%">
+        <div class="grid_12 header-repeat" style="margin-bottom:2px;">
+            <div id="branding">
+                <div class="floatleft">
+                    <a href="/home"><img src="../static/plugin/decoration/img/logo.png" alt="Logo" /></a>
+				</div>
+                <div class="floatright">
+                    <div class="floatleft">
+                        <img src="../static/plugin/decoration/img/img-profile.jpg" alt="Profile Pic" /></div>
+                    <div class="floatleft marginleft10">
+                        <ul class="inline-ul floatleft">
+                            <li>Welcome <b style="font-style: italic; font-size: 20px">{{ username }}</b></li>
+                            <li style="display:none;"><a href="#">Config</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                        <br />
+                        <!--span class="small grey">ddfsfdf</span-->
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div class="grid_12">
+            <ul class="nav main" style="height:40.7px;">
+                <li class="ic-home"  id="ic" style="background-color: lightgreen"><a class="active" href="/home"><span>HOME</span></a></li>
+                <li class="ic-openstack" id="ic"><a href="/spec/standard"><span>STANDARD BENCH</span></a></li>
+				<li class="ic-ceph" id="ic" style="display:none;"><a href="#"><span>APPLICATION BENCH</span></a></li>
+                <li class="ic-bigdata" id="ic"><a href="/summary/{{ release_newest|upper|custimed_replace_point:'_' }}"><span>SUMMARY</span></a></li>
+                <li class="ic-nginx" id="ic" style="display:none;"><a href="#"><span>SETTING</span></a></li>
+				<li class="ic-hhvm" id="ic" style="display:none;"><a href="#"><span>HELP</span></a></li>
+            </ul>
+        </div>
+        <div class="clear">
+        </div>
+		<div class="grid_12">
+            <div class="block ">
+			<h2>HSRP RELEASE INFORMATION</h2>
+			<table class="table_page" id="table_page" style="margin: auto; width: 80%; margin-top: 1%; border: 1px solid #e0d9d9">
+
+			</table>
+            <hr style="background-color:#2e6da4; height: 1px; margin-top:10px;margin-bottom:10px;">
+            <div style=" text-align: center; color: #888888;  margin-bottom: 20px">
+                Any question please contact
+                <a href="#" data-toggle="tooltip" data-placement="top" title="chi.xu@hxt-semitech.com">Xu Chi </a>
+                ©2019 华芯通半导体技术有限公司.
+            </div>
+		</div>
+		<div class="clear">
+        </div>
+    </div>
+</body>
+<script>
+$(document).ready(function() {
+	//$(".activea").click(function() {
+	//	$(this).css("background-color","white").siblings().css("background-color","cadetblue");
+	//});
+});
+		console.log($("#first").children().eq(1).nextAll().filter("ul").hide());
+		$(".my-mainmenu").click(function(){
+			var click_ul= $(this).next()
+			if(click_ul.is(":hidden")){
+				$(".my-submenu").hide();
+				click_ul.slideDown();
+			}else{
+				click_ul.slideUp();
+				}
+		});
+
+</script>
+</html>

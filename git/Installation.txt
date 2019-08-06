@@ -1,0 +1,46 @@
+Smart installation guide on nginx
+
+1:Install library(python version:2.7):
+  yum install -y python34-pip python34-devel epel-release nginx
+  pip3.4 install -r requirements.txt
+
+2:Modify mysql cofiguration
+  vi Performance/settings.py
+  Modify usename, password, database name and host according to related database:
+      PF_DATABASES = {
+           'NAME': '****',
+           'USER': '****',
+           'PASSWORD': '****',
+           'HOST': '****',
+           'PORT': '3306',
+      }
+
+3:Start service on nginx:
+  Add uqsgi config:
+	[uwsgi]
+        socket = 127.0.0.1:3031
+        chdir = /var/www/html/PDP/PDP/Performance/
+        wsgi-file = Performance/wsgi.py
+        processes = 4
+        threads = 2
+        stats = 127.0.0.1:9090
+
+
+  Config nginx:
+    ############################
+        location / {
+            include uwsgi_params;
+            uwsgi_pass 127.0.0.1:3031;
+        }
+
+        location /static {
+            alias /var/www/html/PDP/PDP/Performance/static;
+        }
+
+        location /static/spec {
+            alias /var/www/html/PDP/PDP/Performance/spec/static/spec;
+        }
+
+  Then restart nginx: nginx -s reload
+
+Input IP in your website and you can see the Performance page

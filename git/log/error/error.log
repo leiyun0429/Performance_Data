@@ -1,0 +1,76 @@
+
+Error-ERROR 2019-03-28 10:29:06,251: /tmp/git/Main/views.py->views.login line:55 {'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 52e, v2580', 'desc': 'Invalid credentials'}
+Error-ERROR 2019-03-28 10:29:37,001: /tmp/git/Main/views.py->views.login line:55 {'desc': 'Invalid credentials', 'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 52e, v2580'}
+Error-ERROR 2019-03-28 10:30:52,810: /tmp/git/Main/views.py->views.login line:55 {'desc': 'Invalid credentials', 'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 52e, v2580'}
+Error-ERROR 2019-03-28 10:30:56,186: /tmp/git/Main/views.py->views.login line:55 {'desc': 'Invalid credentials', 'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 52e, v2580'}
+Error-ERROR 2019-03-28 10:31:07,509: /tmp/git/Main/views.py->views.login line:55 {'desc': 'Invalid credentials', 'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 52e, v2580'}
+Error-ERROR 2019-03-28 10:31:09,208: /tmp/git/Main/views.py->views.login line:55 {'desc': 'Invalid credentials', 'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580'}
+Error-ERROR 2019-03-28 10:31:14,190: /tmp/git/Main/views.py->views.login line:55 {'desc': 'Invalid credentials', 'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580'}
+Error-ERROR 2019-03-28 10:31:16,789: /tmp/git/Main/views.py->views.login line:55 {'desc': 'Invalid credentials', 'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580'}
+Error-ERROR 2019-03-28 10:31:22,894: /tmp/git/Main/views.py->views.login line:55 {'desc': 'Invalid credentials', 'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580'}
+Error-ERROR 2019-03-28 10:33:08,088: /tmp/git/Main/views.py->views.login line:55 {'desc': 'Invalid credentials', 'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580'}
+Error-ERROR 2019-03-28 10:33:13,544: /tmp/git/Main/views.py->views.login line:55 {'desc': 'Invalid credentials', 'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580'}
+Error-ERROR 2019-03-28 10:33:28,958: /tmp/git/Main/views.py->views.login line:55 {'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580', 'desc': 'Invalid credentials'}
+Error-ERROR 2019-03-28 10:33:48,211: /tmp/git/Main/views.py->views.login line:55 {'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580', 'desc': 'Invalid credentials'}
+Error-ERROR 2019-03-28 10:38:22,596: /tmp/git/libary/ldap/ldap_auth.py->ldap_auth.auth line:23 {'info': 'Transport endpoint is not connected', 'desc': "Can't contact LDAP server", 'errno': 107}
+Error-ERROR 2019-03-28 10:38:22,596: /tmp/git/Main/views.py->views.login line:55 'NoneType' object is not iterable
+Error-ERROR 2019-03-28 10:50:24,543: /tmp/git/Main/views.py->views.login line:55 {'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580', 'desc': 'Invalid credentials'}
+Error-ERROR 2019-03-28 10:50:26,666: /tmp/git/Main/views.py->views.login line:55 {'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580', 'desc': 'Invalid credentials'}
+Error-ERROR 2019-03-28 10:50:39,634: /tmp/git/Main/views.py->views.login line:55 {'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580', 'desc': 'Invalid credentials'}
+Error-ERROR 2019-03-28 10:50:45,417: /tmp/git/Main/views.py->views.login line:55 {'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580', 'desc': 'Invalid credentials'}
+Error-ERROR 2019-03-28 10:50:51,491: /tmp/git/Main/views.py->views.login line:55 {'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580', 'desc': 'Invalid credentials'}
+Error-ERROR 2019-03-28 10:52:06,961: /tmp/git/Main/views.py->views.login line:57 {'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580', 'desc': 'Invalid credentials'}
+Error-ERROR 2019-03-28 10:52:08,963: /tmp/git/Main/views.py->views.login line:57 {'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580', 'desc': 'Invalid credentials'}
+Error-ERROR 2019-03-28 10:53:23,171: /tmp/git/libary/common/draw_table.py->draw_table.combine_release_data line:28 'SPECCPU'
+Error-ERROR 2019-03-28 10:53:23,171: /tmp/git/Main/views.py->views.query_release line:330 'SPECCPU'
+Error-ERROR 2019-03-28 10:53:26,251: /tmp/git/Main/views.py->views.logout line:69 Can't convert 'NoneType' object to str implicitly
+Error-ERROR 2019-03-28 10:53:36,125: /tmp/git/Main/views.py->views.login line:57 {'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580', 'desc': 'Invalid credentials'}
+Error-ERROR 2019-03-28 10:54:56,705: /tmp/git/Main/views.py->views.logout line:69 Can't convert 'NoneType' object to str implicitly
+Error-ERROR 2019-03-28 10:58:38,197: /tmp/git/Main/views.py->views.login line:57 {'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580', 'desc': 'Invalid credentials'}
+Error-ERROR 2019-03-28 10:58:49,778: /tmp/git/Main/views.py->views.login line:57 {'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580', 'desc': 'Invalid credentials'}
+Error-ERROR 2019-03-28 10:58:51,825: /tmp/git/Main/views.py->views.login line:57 {'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580', 'desc': 'Invalid credentials'}
+Error-ERROR 2019-03-28 10:58:56,820: /tmp/git/Main/views.py->views.login line:57 {'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580', 'desc': 'Invalid credentials'}
+Error-ERROR 2019-03-28 10:59:05,457: /tmp/git/Main/views.py->views.login line:57 {'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580', 'desc': 'Invalid credentials'}
+Error-ERROR 2019-03-28 10:59:15,691: /tmp/git/Main/views.py->views.login line:57 {'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580', 'desc': 'Invalid credentials'}
+Error-ERROR 2019-03-28 11:00:02,348: /tmp/git/Main/views.py->views.login line:57 {'desc': 'Invalid credentials', 'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580'}
+Error-ERROR 2019-03-28 11:00:04,684: /tmp/git/Main/views.py->views.login line:57 Can't convert 'NoneType' object to str implicitly
+Error-ERROR 2019-03-28 11:00:11,886: /tmp/git/Main/views.py->views.login line:57 {'desc': 'Invalid credentials', 'info': '80090308: LdapErr: DSID-0C0903D9, comment: AcceptSecurityContext error, data 775, v2580'}
+Error-ERROR 2019-03-28 11:04:48,391: /tmp/git/Main/views.py->views.logout line:67 Can't convert 'NoneType' object to str implicitly
+Error-ERROR 2019-03-28 11:07:35,289: /tmp/git/Main/views.py->views.logout line:67 Can't convert 'NoneType' object to str implicitly
+Error-ERROR 2019-03-28 11:07:49,595: /tmp/git/Main/views.py->views.logout line:67 Can't convert 'NoneType' object to str implicitly
+Error-ERROR 2019-03-28 11:09:56,613: /tmp/git/Main/views.py->views.logout line:68 Can't convert 'NoneType' object to str implicitly
+Error-ERROR 2019-04-01 15:40:06,750: /tmp/git/libary/common/draw_table.py->draw_table.combine_release_data line:28 'SPECCPU'
+Error-ERROR 2019-04-01 15:40:06,751: /tmp/git/Main/views.py->views.query_release line:327 'SPECCPU'
+Error-ERROR 2019-04-01 15:40:10,281: /tmp/git/libary/common/draw_table.py->draw_table.combine_release_data line:28 'SPECCPU'
+Error-ERROR 2019-04-01 15:40:10,281: /tmp/git/Main/views.py->views.query_release line:327 'SPECCPU'
+Error-ERROR 2019-04-01 15:40:27,487: /tmp/git/libary/common/draw_table.py->draw_table.combine_release_data line:28 'memory_stream(MB/s)'
+Error-ERROR 2019-04-01 15:40:27,487: /tmp/git/Main/views.py->views.query_release line:327 'memory_stream(MB/s)'
+Error-ERROR 2019-04-01 15:41:37,883: /tmp/git/libary/common/draw_table.py->draw_table.combine_release_data line:28 '56G'
+Error-ERROR 2019-04-01 15:41:37,883: /tmp/git/Main/views.py->views.query_release line:327 '56G'
+Error-ERROR 2019-04-01 15:41:53,931: /tmp/git/libary/common/draw_table.py->draw_table.combine_release_data line:28 '56G'
+Error-ERROR 2019-04-01 15:41:53,932: /tmp/git/Main/views.py->views.query_release line:327 '56G'
+Error-ERROR 2019-04-01 15:42:10,252: /tmp/git/libary/common/draw_table.py->draw_table.combine_release_data line:28 '56G'
+Error-ERROR 2019-04-01 15:42:10,252: /tmp/git/Main/views.py->views.query_release line:327 '56G'
+Error-ERROR 2019-04-01 15:42:12,718: /tmp/git/libary/common/draw_table.py->draw_table.combine_release_data line:28 '56G'
+Error-ERROR 2019-04-01 15:42:12,718: /tmp/git/Main/views.py->views.query_release line:327 '56G'
+Error-ERROR 2019-04-01 15:42:15,046: /tmp/git/libary/common/draw_table.py->draw_table.combine_release_data line:28 '56G'
+Error-ERROR 2019-04-01 15:42:15,046: /tmp/git/Main/views.py->views.query_release line:327 '56G'
+Error-ERROR 2019-04-01 15:42:16,800: /tmp/git/libary/common/draw_table.py->draw_table.combine_release_data line:28 '56G'
+Error-ERROR 2019-04-01 15:42:16,801: /tmp/git/Main/views.py->views.query_release line:327 '56G'
+Error-ERROR 2019-04-03 15:06:02,065: /tmp/git/Main/views.py->views.login line:55 Can't convert 'NoneType' object to str implicitly
+Error-ERROR 2019-04-03 19:05:25,266: /tmp/git/libary/common/draw_table.py->draw_table.combine_release_data line:28 '56G'
+Error-ERROR 2019-04-03 19:05:25,266: /tmp/git/spec/views.py->views.standard_query line:641 '56G'
+Error-ERROR 2019-04-03 19:05:56,355: /tmp/git/libary/common/draw_table.py->draw_table.combine_release_data line:28 '56G'
+Error-ERROR 2019-04-03 19:05:56,355: /tmp/git/spec/views.py->views.standard_query line:641 '56G'
+Error-ERROR 2019-04-03 20:02:13,005: /tmp/git/spec/views.py->views.standard_latest line:504 list assignment index out of range
+Error-ERROR 2019-04-03 20:02:50,095: /tmp/git/spec/views.py->views.standard_latest line:504 list indices must be integers, not str
+Error-ERROR 2019-04-03 20:11:01,145: /tmp/git/spec/views.py->views.standard_query line:639 Already closed
+Error-ERROR 2019-04-04 08:14:06,304: /tmp/git/spec/views.py->views.modify_spec_comments line:699 (1054, "Unknown column 'None' in 'field list'")
+Error-ERROR 2019-04-04 08:14:57,629: /tmp/git/spec/views.py->views.modify_spec_comments line:699 (1054, "Unknown column 'None' in 'field list'")
+Error-ERROR 2019-04-04 08:16:22,328: /tmp/git/spec/views.py->views.modify_spec_comments line:699 (1054, "Unknown column 'None' in 'field list'")
+Error-ERROR 2019-04-04 08:18:23,118: /tmp/git/spec/views.py->views.modify_spec_comments line:699 (1452, 'Cannot add or update a child row: a foreign key constraint fails (`pdp`.`comment`, CONSTRAINT `fk_comment_testcase_exec` FOREIGN KEY (`testcase_exec_id`) REFERENCES `testcase_execution` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)')
+Error-ERROR 2019-04-04 09:56:48,572: /tmp/git/Main/views.py->views.login line:55 Can't convert 'NoneType' object to str implicitly
+Error-ERROR 2019-04-04 09:58:16,408: /tmp/git/spec/views.py->views.modify_spec_comments line:699 'comment_id'
+Error-ERROR 2019-04-04 09:59:46,889: /tmp/git/spec/views.py->views.modify_spec_comments line:700 'comment_id'
+Error-ERROR 2019-04-04 10:21:41,339: /tmp/git/spec/views.py->views.delete_spec_comments line:708 string indices must be integers
+Error-ERROR 2019-04-04 10:49:53,878: /tmp/git/Main/views.py->views.login line:55 Can't convert 'NoneType' object to str implicitly

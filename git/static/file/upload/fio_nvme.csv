@@ -1,0 +1,5 @@
+ioengine,iodepth,rw mode,block size,thread,bandwidth(MB/s),kiops,latency(us)
+libaio,32,read,128k,8,543,200,300
+libaio,32,write,128k,8,483,200,300
+libaio,32,randread,4k,8,200,81.8,300
+libaio,32,randwrite,4k,8,200,24.2,300

@@ -1,0 +1,8 @@
+{
+  "speccpu": "SPECCPU",
+  "specjbb": "SPECjbb",
+  "lmbench-stream": "LMbench-stream",
+  "lmbench-latency": "LMbench-latency",
+  "iperf": "iPerf",
+  "fio": "FIO"
+}

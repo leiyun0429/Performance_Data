@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Login</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/plugin/decoration/css/reset.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../static/plugin/decoration/css/text.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../static/plugin/decoration/css/grid.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../static/plugin/decoration/css/layout.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../static/plugin/decoration/css/nav.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../static/plugin/font-awesome-4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/plugin/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/plugin/bootstrap/css/bootstrap.min.css" media="screen" />
+
+	<!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
+    <!-- BEGIN: load jquery -->
+    <script src="../static/plugin/javascript/jquery.min.js" type="text/javascript"></script>
+    <script src="../static/software/login/login.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../static/plugin/decoration/js/jquery-ui/jquery.ui.core.min.js"></script>
+    <script src="../static/plugin/decoration/js/jquery-ui/jquery.ui.widget.min.js" type="text/javascript"></script>
+    <script src="../static/plugin/decoration/js/jquery-ui/jquery.ui.accordion.min.js" type="text/javascript"></script>
+    <script src="../static/plugin/decoration/js/jquery-ui/jquery.effects.core.min.js" type="text/javascript"></script>
+    <script src="../static/plugin/decoration/js/jquery-ui/jquery.effects.slide.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../static/plugin/bootstrap/js/bootstrap.min.js"></script>
+    <!-- END: load jquery -->
+<style>
+
+.btn{
+    border-color:#d5800000;
+}
+
+</style>
+
+</head>
+<body id="container_121" style="background-image:url(../static/plugin/decoration/img/KV-shubo.jpg);
+    background-repeat: no-repeat, repeat;background-size: cover; background-attachment: fixed">
+	<div class="container_12" style="height:100%;">
+
+		<div class="left-part" style="width:20%;height:100px; margin-top:2%; float:left;">
+			<img src="../static/plugin/decoration/img/0-11.png" style="margin-left:5%;">
+		</div>
+
+                <div class="right-part" style=" height:240px;width:30%;float:right;margin-top:5%;padding:15px;border-radius: 5px 5px 5px 5px;">
+                        <h1><span style="color:white;font-style:italic;font-size:30px;"> Performance Data Portal</span></h1><br>
+                        <form action="/login/" method="POST" onsubmit="return check()">
+                                <div class="form-group">
+                                    <label for="username" style="font-family:Times New Roman;font-size:20px;font-weight: bold;color:white;"> User Name:</label>
+                                    <input tabindex="1" class="form-control" style="font:20px Times New Roman; width:200px; border-width:1px; border-style: solid;" type="text"  name="username" id="username" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" style="font-family:Times New Roman;font-size: 20px;font-weight: bold;color:white;"> Password: </label>
+                                    <input tabindex="2" class="form-control"  style="font:20px Times New Roman; width:200px; border-width:1px;" type="password" name="password" id="password" >
+
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input tabindex="3" type="checkbox"><span style="color:white;"> Remember me</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <input tabindex="4" class="btn btn-default" type="submit" style="font-weight: bold;font-family:Times New Roman;font:20px; text-shadow: none;" value="Login" >
+                                </div>
+                <span style="color: red;"><b>{% if message %} {{ message }}{% endif %}</b></span>
+                        </form>
+		</div>
+ 	</div>
+
+	{% if  not message %}
+    <div id="myForm"  style="background:white;border-radius: 5px 5px 5px 5px;width:30%;position:absolute;margin-left:5%;z-index:5000;opacity:1;display: inline-table;">
+        <form style="margin:15px;">
+            <label><i class="fa fa-warning" style="align:left;font-size:24px;color:#FFCC00"></i><span style="font:15px Times New Roman;">
+警告：该网站所有信息安全级别为'INTERNAL USE ONLY'。如果发送给外部人员，需部门主管批准。其它注意事项请参考<a href="http://sharepoint01.hxtcorp.net/sites/HXTDocumentLibrary/Shared%20Documents/HXT_Policy/Security%20Policy/HXT-POL-InformationClassificationHandlingPolicy-V1.2.pdf">'信息分级和处理管理政策'</a>。</span> </label> <br><br>
+            <label style="font:15px Times New Roman;">WARNING:The information security level of this website is 'INTERNAL USE ONLY'. If it needs to be sent to external personnel, it must be approved by the department head. Please refer to other notes in <a href="http://sharepoint01.hxtcorp.net/sites/HXTDocumentLibrary/Shared%20Documents/HXT_Policy/Security%20Policy/HXT-POL-InformationClassificationHandlingPolicy-V1.2.pdf">'Information Classification & Handing Policy'</a>.</label><br><br>
+	    <button type="button" class="btn btn-primary" style="background-color:#1075d9;" onclick="closeForm()"><span style="font-size:12px;color:white;">Agree</span></button>
+        </form>
+    </div>
+	{% endif %}
+</body>
+
+
+
+</html>
